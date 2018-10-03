@@ -14,6 +14,27 @@ ApusPayments is a plataform to make payments using criptocurrencies.
 <hr>
 
 ## Configuration
+
+Add it in your root build.gradle at the end of repositories:
+
+```android
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+Add the dependency
+
+```android
+dependencies {
+	        implementation 'com.github.apuspayments:API-Android:1.0.0'
+}
+```
+
+
 * Call ApusPaymentAPI and choose environment:
      * true:SANDBOX
      * false:PRODUCTION
