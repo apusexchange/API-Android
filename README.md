@@ -4,7 +4,7 @@ ApusPayments is a plataform to make payments using criptocurrencies.
 
 * Language: Java/Kotlin
 
-[Documentation API (v0.0.1)](https://docs.apuspayments.com/)
+[Documentation API](https://docs.apuspayments.com/)
 
 ## Examples of use
 
@@ -42,7 +42,7 @@ dependencies {
      * false:PRODUCTION
 
 ```java
-    val apusPaymentAPI = ApusPaymentAPI(true)
+val apusPaymentAPI = ApusPaymentAPI(true)
 ```
 
 * Set callback to handle the API function
