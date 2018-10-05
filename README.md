@@ -1,4 +1,4 @@
-# APUS-ANDROID
+# APUS-ANDROID [![](https://jitpack.io/v/apuspayments/API-Android.svg)](https://jitpack.io/#apuspayments/API-Android)
 
 ApusPayments is a plataform to make payments using criptocurrencies.
 
