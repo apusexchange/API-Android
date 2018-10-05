@@ -7,8 +7,12 @@ import com.apus.sdkapusandroid.domain.request.*
 import com.apus.sdkapusandroid.domain.response.*
 import com.apus.sdkapusandroid.rest.RestService
 
-class ApusPaymentAPI(isSandBox: Boolean) {
-    private val restService = RestService(if (isSandBox) BuildConfig.SANDBOX_URL else BuildConfig.PRODUCTION_URL)
+enum class Environment {
+    SANDBOX, PRODUCTION
+}
+
+class ApusPaymentAPI(environment: Environment) {
+    private val restService = RestService(if (environment == Environment.SANDBOX) BuildConfig.SANDBOX_URL else BuildConfig.PRODUCTION_URL)
     var callback: (ApusResponse) -> (Unit) =
             {
                 Log.e("APUS", "Callback not implemented")
@@ -40,6 +44,6 @@ class ApusPaymentAPI(isSandBox: Boolean) {
     fun start(searchPayment: SearchPayment, context: Context) {
         restService.extraPath = "checkout/" + searchPayment.vendorKey
 
-        restService.get(context,searchPayment.toParam(), SearchResponse::class.java, callback)
+        restService.get(context, searchPayment.toParam(), SearchResponse::class.java, callback)
     }
 }

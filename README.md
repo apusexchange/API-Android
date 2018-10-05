@@ -36,10 +36,10 @@ dependencies {
 
 
 * Call ApusPaymentAPI and choose environment:
-     * true:SANDBOX
-     * false:PRODUCTION
+     * SANDBOX
+     * PRODUCTION
 ```android
-   val apusPaymentAPI = ApusPaymentAPI(true)
+   val apusPaymentAPI = ApusPaymentAPI(Environment.SANDBOX)
 ```
 
 * Set callback to handle the api function
