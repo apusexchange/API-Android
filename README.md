@@ -38,11 +38,11 @@ dependencies {
 ```
 
 * Call ApusPaymentAPI and choose environment:
-     * true:SANDBOX
-     * false:PRODUCTION
+     * SANDBOX
+     * PRODUCTION
 
 ```java
-val apusPaymentAPI = ApusPaymentAPI(true)
+val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX)
 ```
 
 * Set callback to handle the API function
