@@ -3,9 +3,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 28
-
-
-
+    
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 28
@@ -13,9 +11,7 @@ android {
         versionName "1.0.0"
         buildConfigField "String", "SANDBOX_URL", "\"https://sandbox.apuspayments.com/v1/\""
         buildConfigField "String", "PRODUCTION_URL", "\"https://api.apuspayments.com/v1/\""
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -24,12 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
