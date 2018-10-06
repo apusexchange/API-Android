@@ -1,10 +1,12 @@
-# APUS-ANDROID [![](https://jitpack.io/v/apuspayments/API-Android.svg)](https://jitpack.io/#apuspayments/API-Android)
+# APUS-ANDROID 
 
 ApusPayments is a plataform to make payments using criptocurrencies.
 
 * Language: Java/Kotlin
 
 [Documentation API](https://docs.apuspayments.com/)
+
+[![](https://jitpack.io/v/apuspayments/API-Android.svg)](https://jitpack.io/#apuspayments/API-Android)
 
 ## Examples of use
 
@@ -42,7 +44,7 @@ dependencies {
      * PRODUCTION
 
 ```java
-val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX)
+val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
 ```
 
 * Set callback to handle the API function
@@ -56,6 +58,8 @@ apusPaymentAPI.callback = {response->
 ## Make a payments
 
 ```java
+val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
+
 apusPaymentAPI.start(MakePayment.Builder()
 .withAmount(10)
 .withBlockChain(BlockChain.Type.LTC)
@@ -64,14 +68,16 @@ apusPaymentAPI.start(MakePayment.Builder()
 .withPassWord("1234")
 .withVendorKey("5f5bdaed-f82b-4b82-b3f5-1d562633da5b")
 .build(),
-this)
+this);
 ```
 <hr>
 
 ## Make a recurring payments
 
 ```java
- apusPaymentAPI.start(RecurringPayment.Builder()
+val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
+
+apusPaymentAPI.start(RecurringPayment.Builder()
 .withAmount(10)
 .withBlockChain(BlockChain.Type.LTC)
 .withCurrency(Currency.Type.BRL)
@@ -80,38 +86,44 @@ this)
 .withPassWord("1234")
 .withVendorKey("5f5bdaed-f82b-4b82-b3f5-1d562633da5b")
 .build(),
-this)
+this);
 ```
 <hr>
 
 ## Search payments
 
 ```android
+val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
+
 apusPaymentAPI.start(SearchPayment.Builder()
 .withBlockchain(BlockChain.Type.LTC)
 .withCurrency(Currency.Type.BRL)
 .withTxId("2bf779e2a311c2629df977b0bb105879411fd71f5839972c4ed1d3278f80170f")
 .withVendorKey("5f5bdaed-f82b-4b82-b3f5-1d562633da5b")
 .build(),
-this)
+this);
 ```
 <hr>
 
 ## Cancel a payment
 
 ```android
- apusPaymentAPI.start(CancelPayment.Builder()
+val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
+
+apusPaymentAPI.start(CancelPayment.Builder()
 .withPassWord("1234")
 .withVendorKey("5f5bdaed-f82b-4b82-b3f5-1d562633da5b")
 .withTxId("2bf779e2a311c2629df977b0bb105879411fd71f5839972c4ed1d3278f80170f")
 .build(),
-this)
+this);
 ```
 <hr>
 
 ## Recharge of Crypto Balance
 
 ```android
+val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
+
 apusPaymentAPI.start(RechargeCryptoBalance.Builder()
 .withAmount(10)
 .withBlockChain(BlockChain.Type.LTC)
@@ -120,7 +132,5 @@ apusPaymentAPI.start(RechargeCryptoBalance.Builder()
 .withPassWord("1234")
 .withVendorKey("5f5bdaed-f82b-4b82-b3f5-1d562633da5b")
 .build(),
-this)
+this);
 ```
-<hr>
-
