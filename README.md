@@ -92,7 +92,7 @@ this);
 
 ## Search payments
 
-```android
+```java
 val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
 
 apusPaymentAPI.start(SearchPayment.Builder()
@@ -107,7 +107,7 @@ this);
 
 ## Cancel a payment
 
-```android
+```java
 val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
 
 apusPaymentAPI.start(CancelPayment.Builder()
@@ -121,7 +121,7 @@ this);
 
 ## Recharge of Crypto Balance
 
-```android
+```java
 val apusPaymentAPI = ApusPaymentAPI(Environment.SANBOX);
 
 apusPaymentAPI.start(RechargeCryptoBalance.Builder()
